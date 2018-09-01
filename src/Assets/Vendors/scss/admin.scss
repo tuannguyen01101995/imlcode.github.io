@@ -1,0 +1,217 @@
+$color-dark-navy:#103045;
+$color-white:#F7F8FA;
+$color-grey:#999;
+$color-dark-grey:#1D1D1D;
+$color-blue:#2198DC;
+$color-dark:#202020;
+$color-yellow:#ffc412;
+
+/*Color For Modal*/
+$color-green: #1ab188;
+$color-green-light: lighten($color-green,5%);
+$color-green-dark: darken($color-green,5%);
+/*End color for modal*/
+
+$color-dark-light:#171717;
+$color-light-grey: #F3F3F3;
+$color-blue-gradient: linear-gradient(#103045, #091d2e);
+$color-yellow-gradient: linear-gradient(#ffc412, #ffae0a);
+$color-dark-black:rgba(0,0,0,0.5);
+
+$pd-0: 5px;
+$pd-1: 10px;
+$pd-2: 20px;
+$pd-3: 30px;
+$pd-4per: 4%;
+$pd-7per: 7%;
+$pd-10per: 10%;
+
+$mg-1: 10px;
+$mg-2: 20px;
+$mg-3: 30px;
+$mg-4: 40px;
+$mg-5: 50px;
+$mg-6: 200px;
+
+$fs-1:15px;
+$fs-2:20px;
+$fs-3:30px;
+$fs-4:40px;
+
+$fw-bold:bold;
+$fw-normal:normal;
+$fw-thin: 300;
+
+//Mixin
+@mixin text($color,$fs,$fw-normal)
+{
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw-normal;
+}
+@mixin button($bg,$color,$color-border,$fs,$pd,$bg-hover,$color-hover,$color-border-hover,$bor-radius)
+{
+    background-color: $bg;
+    color: $color;
+    border:1.5px solid $color-border;
+    padding: $pd;
+    font-size: $fs;
+    border-radius: $bor-radius;
+    
+    &:hover{
+        background-color: $bg-hover;
+        color: $color-hover;
+        border:1.5px solid $color-border-hover;
+    }
+}
+@mixin header-line($width-line,$height-line,$color)
+{
+    width: $width-line;
+    height: $height-line;
+    background-color: $color;
+}
+@mixin section-fluid{
+    width: 1400px;
+    margin: auto;
+    @media screen and (max-width:1399px) {
+        width: 100%;
+        margin: 0;
+    }
+}
+@font-face {
+    font-family: Galada;
+    src: url('../Vendors/fonts/Galada/Galada-Regular.ttf');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../Vendors/fonts/Montserrat/Montserrat-Regular.ttf');
+}
+
+body{
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 400;
+    background: $color-light-grey;
+}
+div{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+.logo{
+    font-family: 'Galada', cursive;
+    @include text($color-blue,$fs-3 ,$fw-normal);
+    line-height: 46px;
+    span{
+        @include text($color-yellow,$fs-4*1.1 ,$fw-normal);
+    }
+}
+.active{
+    background: $color-yellow !important;
+}
+
+/*side navbar*/
+.sidenav {
+    height: 100%;
+    
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: $color-blue-gradient;
+    overflow-x: hidden;
+    padding-top: 20px;
+    .nav-link {
+        
+        @include text($color-white, $fs-2 , $fw-normal);
+        &:hover{
+            background: $color-yellow;
+        }
+    }
+}
+/*End side navbar*/
+
+/*Main*/
+.main {
+    margin-left: 233px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px $pd-2;
+    
+}
+#present{
+    max-width: 1000px;
+    margin: auto;
+    .content{
+        p{
+            @include text( $color-dark-navy, $fs-2, $fw-bold);
+        }
+    }
+    .title-number{
+        @include text( $color-yellow, $fs-4, $fw-bold);
+    }
+}
+#chatbox{
+    #panel{
+        background: #fff;
+        border-radius: 10px;
+        border: 2px solid $color-dark-navy;
+        padding: $pd-2;
+    }
+    .chat
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .chat li
+    {
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+
+    .chat li .chat-body p
+    {
+        margin: 0;
+        @include text( $color-dark-navy, $fs-2 , $fw-normal);
+    }
+
+    .panel-body
+    {
+        overflow-y: scroll;
+        height: 400px;
+    }
+
+    ::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar
+    {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+
+    ::-webkit-scrollbar-thumb
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #555;
+    }
+}
+/*End Main*/
+
+/*Footer*/
+#footer{
+    margin-left: 233px; 
+    background: $color-dark;
+    p{
+        text-align: center; 
+        padding: 50px;
+        color: $color-white ;
+    }
+}
+/*End Footer*/

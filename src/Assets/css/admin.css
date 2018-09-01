@@ -1,0 +1,113 @@
+/*Color For Modal*/
+/*End color for modal*/
+@font-face {
+  font-family: Galada;
+  src: url("../Vendors/fonts/Galada/Galada-Regular.ttf"); }
+@font-face {
+  font-family: Montserrat;
+  src: url("../Vendors/fonts/Montserrat/Montserrat-Regular.ttf"); }
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  background: #F3F3F3; }
+
+div {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.logo {
+  font-family: 'Galada', cursive;
+  color: #2198DC;
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 46px; }
+  .logo span {
+    color: #ffc412;
+    font-size: 44px;
+    font-weight: normal; }
+
+.active {
+  background: #ffc412 !important; }
+
+/*side navbar*/
+.sidenav {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#103045, #091d2e);
+  overflow-x: hidden;
+  padding-top: 20px; }
+  .sidenav .nav-link {
+    color: #F7F8FA;
+    font-size: 20px;
+    font-weight: normal; }
+    .sidenav .nav-link:hover {
+      background: #ffc412; }
+
+/*End side navbar*/
+/*Main*/
+.main {
+  margin-left: 233px;
+  /* Same as the width of the sidenav */
+  font-size: 28px;
+  /* Increased text to enable scrolling */
+  padding: 0px 20px; }
+
+#present {
+  max-width: 1000px;
+  margin: auto; }
+  #present .content p {
+    color: #103045;
+    font-size: 20px;
+    font-weight: bold; }
+  #present .title-number {
+    color: #ffc412;
+    font-size: 40px;
+    font-weight: bold; }
+
+#chatbox #panel {
+  background: #fff;
+  border-radius: 10px;
+  border: 2px solid #103045;
+  padding: 20px; }
+#chatbox .chat {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+#chatbox .chat li {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 5px; }
+#chatbox .chat li .chat-body p {
+  margin: 0;
+  color: #103045;
+  font-size: 20px;
+  font-weight: normal; }
+#chatbox .panel-body {
+  overflow-y: scroll;
+  height: 400px; }
+#chatbox ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5; }
+#chatbox ::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5; }
+#chatbox ::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555; }
+
+/*End Main*/
+/*Footer*/
+#footer {
+  margin-left: 233px;
+  background: #202020; }
+  #footer p {
+    text-align: center;
+    padding: 50px;
+    color: #F7F8FA; }
+
+/*End Footer*/
+
+/*# sourceMappingURL=admin.css.map */

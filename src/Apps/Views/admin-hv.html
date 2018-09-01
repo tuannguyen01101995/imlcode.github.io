@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quản lý học viên</title>
+    <link rel="stylesheet" href="../../Assets/Vendors/animated/animate.css">
+    <link rel="stylesheet" href="../../Assets/Vendors/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../../Assets/Vendors/bootstrap-4.1.1/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Assets/css/admin-hv.css">
+</head>
+
+<body>
+
+    <nav class="sidenav">
+        <a href="trang-chu.html" class="text-white back-btn p-3">
+            <i class="fa fa-long-arrow-left"></i> Trở về trang chủ</a>
+        <ul class="navbar-nav py-4">
+            <li class="nav-item">
+                <p class="mb-0 py-3 px-4 logo">Im<span>LCode</span>
+                </p>
+            </li>
+            <li class="nav-item">
+                <p class="nav-link mb-0 py-3 px-4" id="nav_user_name"></p>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-3 px-4" href="admin.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-3 px-4 actives" href="admin-hv.html">Quản Lý Học Viên</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-3 px-4" href="admin-kh.html">Quản Lý Khóa Học</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link py-3 px-4" href="#" id="btn_Exit">Đăng xuất</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="main">
+        <section>
+            <!--for demo wrap-->
+            <h2>Quản lý học viên</h2>
+            <div class="my-3 d-flex justify-content-between">
+                <div class="">
+                    <button class="btn btn-danger" id="btn_XoaNhieu">
+                        <i class="fa fa-times"></i> Xóa nhiều</button>
+                </div>
+                <div class=" d-flex rounded">
+                    <select name="" id="select_search" class="sel-font-s">
+                        <option class="" value="0">Tài Khoản</option>
+                        <option class="" value="1">Tên</option>
+                    </select>
+                    <input type="text" class="form-control " id="input_Tim" placeholder="Nhập dữ liệu cần tìm">
+                </div>
+            </div>
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Họ Tên</th>
+                            <th>Email</th>
+                            <th>SDT</th>
+                            <th>Tài khoản</th>
+                            <th>Mật khẩu</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="tbl-content">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+
+           
+                <div class="d-inline-block mt-2">
+                    <button class="btn btn-success" id="btn_Them">
+                        <i class="fa fa-plus"></i> Thêm</button>
+                    <button class="btn btn-dark" id="btn_Refresh">
+                        <i class="fa fa-refresh"></i> Refresh</button>
+                </div>
+        </section>
+    </div>
+
+    <!--Modal-->
+    <div class="modal pr-0" id="modal">
+        <div class="form animated fadeInDown">
+            <button id="btn_Exit" type="button" class="close" data-dismiss="modal">&times;</button>
+
+            <h1>Thêm</h1>
+
+            <div class="field-wrap">
+                <label id="tbHoTen">
+                    Họ Tên
+                    <span class="req">*</span>
+                </label>
+                <input type="text" required autocomplete="off" id="txtHoTen" />
+            </div>
+
+            <div class="field-wrap">
+                <label id="tbEmail">
+                    Email
+                </label>
+                <input type="email" required autocomplete="off" id="txtEmail" />
+            </div>
+
+            <div class="field-wrap">
+                <label id="tbSDT">
+                    Số điện thoại
+                </label>
+                <input type="number" required autocomplete="off" id="txtSDT" />
+            </div>
+
+            <div class="field-wrap">
+                <label id="tbID">
+                    Tài Khoản
+                    <span class="req">*</span>
+                </label>
+                <input type="text" required autocomplete="off" id="txtId" />
+            </div>
+
+            <div class="field-wrap">
+                <label id="tbPass">
+                    Nhập Mật Khẩu
+                    <span class="req">*</span>
+                </label>
+                <input type="password" required autocomplete="off" id="txtPassword" />
+            </div>
+
+            <div id="modal-footer"></div>
+
+        </div>
+        <!-- tab-content -->
+    </div>
+    <div class="modal pr-0" id="modal_GhiDanh">
+        <div class="form animated fadeInDown">
+            <button id="btn_Exit" type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1>Ghi Danh</h1>
+            <div class="">
+                <h3 class="text-right my-3">Ghi Danh cho học viên  <span id="id_hocvien"></span>!</h3>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class=" d-flex rounded">
+                    <select name="" id="select_searchKH" class="sel-font-s">
+                        <option class="" value="0">Tên khóa học</option>
+                        <option class="" value="1">Mã khóa học</option>
+                    </select>
+                    <input type="text" class="form-control rounded-right" id="input_TimKH" placeholder="Nhập dữ liệu cần tìm">
+                </div>
+                <div>
+                    <button class="btn btn-success" id="btn_GhiDanh">Ghi Danh</button>
+                </div>
+            </div>
+
+            <div class="row mx-0 mt-3" id="content">
+
+            </div>
+
+        </div>
+        <!-- tab-content -->
+    </div>
+    <!--End Modal-->
+
+
+    <script src="../../Assets/js/jquery-3.3.1.min.js"></script>
+    <script src="../../Assets/js/popper.min.js"></script>
+    <script src="../../Assets/js/bootstrap.min.js"></script>
+
+    <script src="../../Assets/js/modal.js"></script>
+    <script src="../../Assets/js/sweetalert2.all.js"></script>
+
+    <script src="../Models/NguoiDung.js"></script>
+    <script src="../Models/DanhSachNguoiDung.js"></script>
+    <script src="../Services/NguoiDungServices.js"></script>
+
+    <script src="../Models/KhoaHoc.js"></script>
+    <script src="../Models/DanhSachKhoaHoc.js"></script>
+    <script src="../Services/KhoaHocServices.js"></script>
+
+
+    <script src="../Controllers/check_admin.js"></script>
+    <script src="../Controllers/admin_menu_options.js"></script>
+
+    <script src="../Controllers/admin-hv.js"></script>
+</body>
+
+</html>
