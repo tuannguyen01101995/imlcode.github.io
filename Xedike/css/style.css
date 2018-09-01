@@ -1,0 +1,817 @@
+#header {
+  background-color: #263342; }
+  #header nav {
+    width: 1200px;
+    margin: auto;
+    padding: 0; }
+    #header nav .navbar-brand {
+      margin-right: 30px;
+      padding: 10px 0; }
+      #header nav .navbar-brand img {
+        height: 50px; }
+      @media screen and (max-width: 425px) {
+        #header nav .navbar-brand {
+          margin: 0 10px; }
+          #header nav .navbar-brand img {
+            height: 30px; } }
+    #header nav .ul-left li {
+      border-bottom: 4px solid transparent;
+      border-top: 4px solid transparent;
+      padding: 0 20px; }
+      #header nav .ul-left li a {
+        color: #fff;
+        font-size: 15px;
+        font-weight: normal;
+        font-weight: bold;
+        padding: 20px 0; }
+      #header nav .ul-left li:hover {
+        border-bottom-color: #008fe1;
+        animation: change_color 1s; }
+@keyframes change_color {
+  0% {
+    border-bottom-color: #fff; }
+  50% {
+    border-bottom-color: #008fe1; } }
+    #header nav .right-menu {
+      color: #fff;
+      font-size: 17px;
+      font-weight: normal; }
+      #header nav .right-menu .right-menu-login, #header nav .right-menu .right-menu-signup, #header nav .right-menu .right-menu-dropdown {
+        margin: 0 10px; }
+      #header nav .right-menu .right-menu-login button {
+        background-color: transparent;
+        color: #fff;
+        border: 1.5px solid transparent;
+        padding: 10px 20px;
+        font-size: 17px;
+        border-radius: 5px; }
+        #header nav .right-menu .right-menu-login button:hover {
+          background-color: transparent;
+          color: #fff;
+          border: 1.5px solid transparent; }
+      #header nav .right-menu .right-menu-signup button {
+        background-color: #008fe1;
+        color: #fff;
+        border: 1.5px solid #008fe1;
+        padding: 10px 20px;
+        font-size: 17px;
+        border-radius: 5px; }
+        #header nav .right-menu .right-menu-signup button:hover {
+          background-color: #fff;
+          color: #008fe1;
+          border: 1.5px solid #fff; }
+      #header nav .right-menu .right-menu-dropdown {
+        font-size: 30px; }
+        #header nav .right-menu .right-menu-dropdown a {
+          padding: 10px; }
+      @media screen and (max-width: 720px) {
+        #header nav .right-menu {
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          background-color: rgba(38, 51, 66, 0.9);
+          z-index: 10000;
+          justify-content: center;
+          padding: 20px 0; }
+          #header nav .right-menu .right-menu-login button {
+            border-color: #fff; }
+          #header nav .right-menu .right-menu-dropdown {
+            display: none; } }
+    @media screen and (max-width: 1200px) {
+      #header nav {
+        width: auto;
+        margin: 0; } }
+
+/*Modal Form*/
+#dangnhapmodal .modal-dialog {
+  z-index: 20000;
+  top: 100px; }
+  #dangnhapmodal .modal-dialog .modal-content {
+    padding: 25px;
+    position: relative; }
+    @media screen and (max-width: 425px) {
+      #dangnhapmodal .modal-dialog .modal-content {
+        padding: 0; } }
+    #dangnhapmodal .modal-dialog .modal-content .button-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 1002; }
+    #dangnhapmodal .modal-dialog .modal-content .contain-modal {
+      padding: 25px; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal .form-group {
+        margin-top: 20px; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal h2 {
+        color: #333333;
+        font-size: 25px;
+        font-weight: normal;
+        font-weight: bold; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal p {
+        color: #808080;
+        font-size: 12px;
+        font-weight: normal;
+        margin-bottom: 50px; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .input-f input {
+        height: 46px; }
+        #dangnhapmodal .modal-dialog .modal-content .contain-modal form .input-f input::placeholder {
+          color: #808080;
+          opacity: 0.7; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .checkbox-login {
+        color: #333333;
+        font-size: 13.5px;
+        font-weight: normal; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login {
+        background-color: #008fe1;
+        color: #fff;
+        border: 1.5px solid #008fe1;
+        padding: 10px 20px;
+        font-size: 17px;
+        border-radius: 5px; }
+        #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login:hover {
+          background-color: #fff;
+          color: #008fe1;
+          border: 1.5px solid #fff; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .title-with-line {
+        border-bottom: 1px solid #808080;
+        opacity: 0.8;
+        height: 14px;
+        position: relative; }
+        #dangnhapmodal .modal-dialog .modal-content .contain-modal form .title-with-line span {
+          padding: 0 10px;
+          background-color: #fff;
+          color: #333333;
+          font-size: 13.5px;
+          font-weight: normal; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb {
+        background-color: #435B9A;
+        color: #fff;
+        border: 1.5px solid #435B9A;
+        padding: 10px 20px;
+        font-size: 17px;
+        border-radius: 5px; }
+        #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb:hover {
+          background-color: #435B9A;
+          color: #fff;
+          border: 1.5px solid #435B9A; }
+        #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb i {
+          margin-right: 5px; }
+        #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb span {
+          font-weight: bold; }
+
+#dangkymodal .modal-dialog {
+  z-index: 20000;
+  top: 100px; }
+  #dangkymodal .modal-dialog .modal-content {
+    padding: 25px;
+    position: relative; }
+    #dangkymodal .modal-dialog .modal-content h2 {
+      color: #333333;
+      font-size: 25px;
+      font-weight: normal;
+      font-weight: bold; }
+    #dangkymodal .modal-dialog .modal-content .button-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 1002; }
+    #dangkymodal .modal-dialog .modal-content .contain-modal {
+      padding: 25px; }
+      @media screen and (max-width: 425px) {
+        #dangkymodal .modal-dialog .modal-content .contain-modal {
+          padding: 0; } }
+    #dangkymodal .modal-dialog .modal-content .btn-signup {
+      background-color: transparent;
+      color: #333333;
+      border: 1.5px solid #dddddd;
+      padding: 0;
+      font-size: 17px;
+      border-radius: 5px; }
+      #dangkymodal .modal-dialog .modal-content .btn-signup:hover {
+        background-color: #dddddd;
+        color: #333333;
+        border: 1.5px solid #008fe1; }
+      #dangkymodal .modal-dialog .modal-content .btn-signup .signup-padding {
+        padding: 20px; }
+        #dangkymodal .modal-dialog .modal-content .btn-signup .signup-padding p {
+          margin-top: 30px;
+          margin-bottom: 20px;
+          font-weight: bold; }
+          @media screen and (max-width: 400px) {
+            #dangkymodal .modal-dialog .modal-content .btn-signup .signup-padding p {
+              font-size: 13.5px;
+              margin-top: 10px;
+              margin-bottom: 0; } }
+        @media screen and (max-width: 400px) {
+          #dangkymodal .modal-dialog .modal-content .btn-signup .signup-padding {
+            padding: 10px; } }
+
+#dangky-khachmodal .modal-dialog, #dangky-taixemodal .modal-dialog, #quen-matkhaumodal .modal-dialog {
+  top: 25px;
+  z-index: 20000; }
+  #dangky-khachmodal .modal-dialog .modal-content, #dangky-taixemodal .modal-dialog .modal-content, #quen-matkhaumodal .modal-dialog .modal-content {
+    padding: 25px;
+    position: relative; }
+    @media screen and (max-width: 425px) {
+      #dangky-khachmodal .modal-dialog .modal-content, #dangky-taixemodal .modal-dialog .modal-content, #quen-matkhaumodal .modal-dialog .modal-content {
+        padding: 0; } }
+    #dangky-khachmodal .modal-dialog .modal-content .button-close, #dangky-taixemodal .modal-dialog .modal-content .button-close, #quen-matkhaumodal .modal-dialog .modal-content .button-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1002; }
+    #dangky-khachmodal .modal-dialog .modal-content .contain-modal, #dangky-taixemodal .modal-dialog .modal-content .contain-modal, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal {
+      padding: 25px; }
+      #dangky-khachmodal .modal-dialog .modal-content .contain-modal .form-group, #dangky-taixemodal .modal-dialog .modal-content .contain-modal .form-group, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal .form-group {
+        margin-bottom: 20px; }
+      #dangky-khachmodal .modal-dialog .modal-content .contain-modal h2, #dangky-taixemodal .modal-dialog .modal-content .contain-modal h2, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal h2 {
+        color: #333333;
+        font-size: 25px;
+        font-weight: normal;
+        font-weight: bold; }
+      #dangky-khachmodal .modal-dialog .modal-content .contain-modal p, #dangky-taixemodal .modal-dialog .modal-content .contain-modal p, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal p {
+        color: #808080;
+        font-size: 13.5px;
+        font-weight: normal;
+        margin-bottom: 40px; }
+      #dangky-khachmodal .modal-dialog .modal-content .contain-modal form .input-f input, #dangky-taixemodal .modal-dialog .modal-content .contain-modal form .input-f input, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal form .input-f input {
+        height: 46px; }
+        #dangky-khachmodal .modal-dialog .modal-content .contain-modal form .input-f input::placeholder, #dangky-taixemodal .modal-dialog .modal-content .contain-modal form .input-f input::placeholder, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal form .input-f input::placeholder {
+          color: #808080;
+          opacity: 0.7; }
+      #dangky-khachmodal .modal-dialog .modal-content .contain-modal form .btn-login, #dangky-taixemodal .modal-dialog .modal-content .contain-modal form .btn-login, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal form .btn-login {
+        background-color: #008fe1;
+        color: #fff;
+        border: 1.5px solid #008fe1;
+        padding: 10px 20px;
+        font-size: 17px;
+        border-radius: 5px; }
+        #dangky-khachmodal .modal-dialog .modal-content .contain-modal form .btn-login:hover, #dangky-taixemodal .modal-dialog .modal-content .contain-modal form .btn-login:hover, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal form .btn-login:hover {
+          background-color: #fff;
+          color: #008fe1;
+          border: 1.5px solid #fff; }
+      #dangky-khachmodal .modal-dialog .modal-content .contain-modal form .title-with-line, #dangky-taixemodal .modal-dialog .modal-content .contain-modal form .title-with-line, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal form .title-with-line {
+        border-bottom: 1px solid #808080;
+        opacity: 0.8;
+        height: 14px;
+        position: relative; }
+        #dangky-khachmodal .modal-dialog .modal-content .contain-modal form .title-with-line span, #dangky-taixemodal .modal-dialog .modal-content .contain-modal form .title-with-line span, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal form .title-with-line span {
+          padding: 0 10px;
+          background-color: #fff;
+          color: #333333;
+          font-size: 13.5px;
+          font-weight: normal; }
+      #dangky-khachmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb, #dangky-taixemodal .modal-dialog .modal-content .contain-modal form .btn-login-fb, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal form .btn-login-fb {
+        background-color: #435B9A;
+        color: #fff;
+        border: 1.5px solid #435B9A;
+        padding: 10px 20px;
+        font-size: 17px;
+        border-radius: 5px; }
+        #dangky-khachmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb:hover, #dangky-taixemodal .modal-dialog .modal-content .contain-modal form .btn-login-fb:hover, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal form .btn-login-fb:hover {
+          background-color: #435B9A;
+          color: #fff;
+          border: 1.5px solid #435B9A; }
+        #dangky-khachmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb i, #dangky-taixemodal .modal-dialog .modal-content .contain-modal form .btn-login-fb i, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal form .btn-login-fb i {
+          margin-right: 5px; }
+        #dangky-khachmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb span, #dangky-taixemodal .modal-dialog .modal-content .contain-modal form .btn-login-fb span, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal form .btn-login-fb span {
+          font-weight: bold; }
+
+#quen-matkhaumodal .contain-modal p {
+  margin: 20px; }
+#quen-matkhaumodal .btn-login {
+  margin-top: 20px;
+  background-color: #008fe1;
+  color: #fff;
+  border: 1.5px solid #008fe1;
+  padding: 10px 20px;
+  font-size: 17px;
+  border-radius: 5px; }
+  #quen-matkhaumodal .btn-login:hover {
+    background-color: #fff;
+    color: #008fe1;
+    border: 1.5px solid #fff; }
+
+/*End Modal Form*/
+/*Contain*/
+.contain-top {
+  background: url("../img/img_topbg_home.png"), url("../img/img_background_5trip.6ad1787f.png");
+  background-position: center top, center bottom;
+  background-repeat: no-repeat;
+  z-index: 50;
+  position: relative;
+  padding-bottom: 60px; }
+  .contain-top .overplay {
+    position: absolute;
+    top: 0;
+    background-color: #263342;
+    background-blend-mode: overlay;
+    opacity: 0.3;
+    height: 630px;
+    width: 100%;
+    z-index: -5; }
+  .contain-top .main-title {
+    z-index: 5000; }
+    .contain-top .main-title h1 {
+      color: #fff;
+      font-size: 40px;
+      font-weight: normal;
+      font-weight: 500;
+      padding-top: 120px; }
+      @media screen and (max-width: 1200px) {
+        .contain-top .main-title h1 {
+          padding-top: 60px; } }
+    .contain-top .main-title p {
+      color: #fff;
+      font-size: 24px;
+      font-weight: normal;
+      padding: 30px 0; }
+      @media screen and (max-width: 1200px) {
+        .contain-top .main-title p {
+          padding: 30px 0; } }
+  .contain-top .main-input-group {
+    width: 80%;
+    margin: auto; }
+    .contain-top .main-input-group .group-content .group-item .input-group {
+      background-color: #fff;
+      color: #333333;
+      border: 1.5px solid #fff;
+      padding: 10px 10px;
+      font-size: 17px;
+      border-radius: 0; }
+      .contain-top .main-input-group .group-content .group-item .input-group:hover {
+        background-color: #fff;
+        color: #333333;
+        border: 1.5px solid #fff; }
+      .contain-top .main-input-group .group-content .group-item .input-group .input-group-text, .contain-top .main-input-group .group-content .group-item .input-group .input-group-prepend {
+        border-radius: 0;
+        background-color: #fff;
+        width: 50px;
+        border: 0; }
+      .contain-top .main-input-group .group-content .group-item .input-group .form-control {
+        border-radius: 0;
+        border: 0; }
+      .contain-top .main-input-group .group-content .group-item .input-group .input-date, .contain-top .main-input-group .group-content .group-item .input-group .input-number {
+        height: 38px; }
+      .contain-top .main-input-group .group-content .group-item .input-group .number-title {
+        line-height: 38px; }
+    .contain-top .main-input-group .group-content .group-item .border-left-main {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px; }
+    .contain-top .main-input-group button {
+      background-color: #008fe1;
+      color: #333333;
+      border: 1.5px solid #008fe1;
+      padding: 10px 10px;
+      font-size: 17px;
+      border-radius: 0;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; }
+      .contain-top .main-input-group button:hover {
+        background-color: #008fe1;
+        color: #333333;
+        border: 1.5px solid #008fe1; }
+    @media screen and (max-width: 1200px) {
+      .contain-top .main-input-group {
+        width: 90%; }
+        .contain-top .main-input-group .group-content {
+          background-color: transparent;
+          border-color: transparent; }
+          .contain-top .main-input-group .group-content .group-item .input-group {
+            margin: 10px 0;
+            background-color: #fff;
+            color: #333333;
+            border: 1.5px solid #fff;
+            padding: 10px 10px;
+            font-size: 17px;
+            border-radius: 5px; }
+            .contain-top .main-input-group .group-content .group-item .input-group:hover {
+              background-color: #fff;
+              color: #333333;
+              border: 1.5px solid #fff; }
+            .contain-top .main-input-group .group-content .group-item .input-group .input-group-text, .contain-top .main-input-group .group-content .group-item .input-group .input-group-prepend {
+              border-radius: 0;
+              background-color: #fff;
+              width: 50px; }
+            .contain-top .main-input-group .group-content .group-item .input-group .form-control {
+              border-radius: 0; }
+        .contain-top .main-input-group button {
+          margin: 10px 0;
+          border-radius: 5px; } }
+  .contain-top .container-content {
+    width: 75%;
+    margin: auto;
+    background-color: #fff;
+    color: #333333;
+    border: 1.5px solid #dddddd;
+    padding: 0;
+    font-size: 17px;
+    border-radius: 10px;
+    margin-top: 120px; }
+    .contain-top .container-content:hover {
+      background-color: #fff;
+      color: #333333;
+      border: 1.5px solid #dddddd; }
+    .contain-top .container-content .bg-grey {
+      background-color: #fafafa;
+      border-top: 1px solid #dddddd;
+      border-bottom: 1px solid #dddddd; }
+    .contain-top .container-content .container-item {
+      padding: 20px;
+      display: grid;
+      grid-template-rows: auto auto;
+      grid-auto-flow: column;
+      grid-auto-rows: minmax(30px, auto);
+      grid-gap: 15px;
+      /*grid-columns-gap | grid-rows-gap*/ }
+      .contain-top .container-content .container-item .item p {
+        margin: 0;
+        line-height: 40px; }
+      .contain-top .container-content .container-item .item .title {
+        color: #333333;
+        font-size: 18px;
+        font-weight: normal;
+        font-weight: bold; }
+        @media screen and (max-width: 510px) {
+          .contain-top .container-content .container-item .item .title {
+            color: #333333;
+            font-size: 18px;
+            font-weight: normal;
+            font-weight: bold; } }
+      .contain-top .container-content .container-item .item .date i {
+        padding-right: 10px;
+        color: #808080;
+        font-size: 18px;
+        font-weight: normal; }
+      .contain-top .container-content .container-item .item .date span {
+        color: #333333;
+        font-size: 18px;
+        font-weight: normal; }
+      @media screen and (max-width: 510px) {
+        .contain-top .container-content .container-item .item .date i, .contain-top .container-content .container-item .item .date span {
+          color: #333333;
+          font-size: 16px;
+          font-weight: normal; } }
+      .contain-top .container-content .container-item .item .vehicle i {
+        padding-right: 10px;
+        color: #808080;
+        font-size: 18px;
+        font-weight: normal; }
+      .contain-top .container-content .container-item .item .vehicle span {
+        color: #808080;
+        font-size: 18px;
+        font-weight: normal; }
+      @media screen and (max-width: 510px) {
+        .contain-top .container-content .container-item .item .vehicle i, .contain-top .container-content .container-item .item .vehicle span {
+          color: #333333;
+          font-size: 16px;
+          font-weight: normal; } }
+      .contain-top .container-content .container-item .item .info p i {
+        padding-right: 10px;
+        color: #808080;
+        font-size: 18px;
+        font-weight: normal; }
+      .contain-top .container-content .container-item .item .name {
+        display: flex; }
+        .contain-top .container-content .container-item .item .name img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%; }
+        .contain-top .container-content .container-item .item .name p {
+          padding-left: 10px;
+          color: #333333;
+          font-size: 18px;
+          font-weight: normal;
+          font-weight: bold; }
+        @media screen and (max-width: 510px) {
+          .contain-top .container-content .container-item .item .name {
+            display: inline-block;
+            text-align: center; }
+            .contain-top .container-content .container-item .item .name p {
+              word-wrap: break-word;
+              padding: 0; } }
+      .contain-top .container-content .container-item .item .rating {
+        display: flex; }
+        .contain-top .container-content .container-item .item .rating .rating-point {
+          background-color: #ffbf00;
+          color: #333333;
+          border: 1.5px solid #ffbf00;
+          padding: 10px 12px;
+          font-size: 17px;
+          border-radius: 50%; }
+          .contain-top .container-content .container-item .item .rating .rating-point:hover {
+            background-color: #ffbf00;
+            color: #333333;
+            border: 1.5px solid #ffbf00; }
+        .contain-top .container-content .container-item .item .rating .rating-comment {
+          padding-left: 10px; }
+          .contain-top .container-content .container-item .item .rating .rating-comment .rating-star {
+            color: #ffbf00; }
+        @media screen and (max-width: 510px) {
+          .contain-top .container-content .container-item .item .rating {
+            width: 100%;
+            display: inline-block;
+            text-align: center; }
+            .contain-top .container-content .container-item .item .rating .rating-point {
+              margin: auto;
+              text-align: center;
+              width: 50px;
+              height: 50px;
+              line-height: 50px;
+              background-color: #ffbf00;
+              color: #333333;
+              border: 1.5px solid #ffbf00;
+              padding: 0;
+              font-size: 17px;
+              border-radius: 50%; }
+              .contain-top .container-content .container-item .item .rating .rating-point:hover {
+                background-color: #ffbf00;
+                color: #333333;
+                border: 1.5px solid #ffbf00; } }
+      .contain-top .container-content .container-item .item .price {
+        color: #333333;
+        font-size: 22px;
+        font-weight: normal;
+        font-weight: bold;
+        text-align: center; }
+        .contain-top .container-content .container-item .item .price p {
+          line-height: 40px; }
+        @media screen and (max-width: 857px) {
+          .contain-top .container-content .container-item .item .price {
+            text-align: left; } }
+      .contain-top .container-content .container-item .item .detail-trip {
+        text-align: center; }
+        .contain-top .container-content .container-item .item .detail-trip button {
+          background-color: #f96d00;
+          color: #fff;
+          border: 1.5px solid #f96d00;
+          padding: 10px 12px;
+          font-size: 17px;
+          border-radius: 5px; }
+          .contain-top .container-content .container-item .item .detail-trip button:hover {
+            background-color: #fff;
+            color: #f96d00;
+            border: 1.5px solid #f96d00; }
+        @media screen and (max-width: 857px) {
+          .contain-top .container-content .container-item .item .detail-trip {
+            text-align: left; } }
+      @media screen and (max-width: 857px) {
+        .contain-top .container-content .container-item {
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-flow: row; }
+          .contain-top .container-content .container-item .merge-col1-2 {
+            grid-column-start: 1;
+            grid-column-end: 3; }
+          .contain-top .container-content .container-item .merge-col4-5 {
+            grid-column-start: 1;
+            grid-column-end: 3; }
+          .contain-top .container-content .container-item .item {
+            width: 100%; } }
+    @media screen and (max-width: 1200px) {
+      .contain-top .container-content {
+        width: 90%;
+        border-radius: 0;
+        background-color: transparent;
+        border-color: transparent; }
+        .contain-top .container-content .container-item {
+          margin: 20px 0;
+          background-color: #fff;
+          color: #333333;
+          border: 1.5px solid #dddddd;
+          padding: 20px 20px;
+          font-size: 17px;
+          border-radius: 5px; }
+          .contain-top .container-content .container-item:hover {
+            background-color: #fff;
+            color: #333333;
+            border: 1.5px solid #dddddd; }
+          .contain-top .container-content .container-item .title {
+            border-bottom: 1px solid #dddddd; } }
+
+/*Intro*/
+.intro {
+  width: 1200px;
+  margin: auto;
+  padding: 60px 0; }
+  @media screen and (max-width: 1200px) {
+    .intro {
+      width: 90%;
+      margin: auto; } }
+  .intro .content .intro-detail h1 {
+    color: #333333;
+    font-size: 30px;
+    font-weight: normal;
+    font-weight: 500;
+    margin: 0; }
+  .intro .content .intro-detail p {
+    padding: 20px 0;
+    color: #333333;
+    font-size: 18px;
+    font-weight: normal; }
+  .intro .content .intro-detail button {
+    background-color: #008fe1;
+    color: #fff;
+    border: 1.5px solid #008fe1;
+    padding: 10px 20px;
+    font-size: 17px;
+    border-radius: 5px; }
+    .intro .content .intro-detail button:hover {
+      background-color: #fff;
+      color: #008fe1;
+      border: 1.5px solid #008fe1; }
+
+/*End Intro*/
+/*About us*/
+.about-us {
+  background-color: #F3FCFF; }
+  .about-us .contain {
+    width: 1200px;
+    margin: auto;
+    padding: 60px 0; }
+    @media screen and (max-width: 1200px) {
+      .about-us .contain {
+        width: 90%;
+        margin: auto; } }
+    .about-us .contain .about-title {
+      margin-bottom: 60px; }
+      .about-us .contain .about-title h1 {
+        color: #333333;
+        font-size: 30px;
+        font-weight: normal;
+        font-weight: bold; }
+      .about-us .contain .about-title p {
+        color: #808080;
+        font-size: 15px;
+        font-weight: normal;
+        margin: 0; }
+    .about-us .contain .intro-item {
+      text-align: center; }
+      .about-us .contain .intro-item img {
+        margin: 10px 0;
+        height: 65px; }
+      .about-us .contain .intro-item h2 {
+        margin: 10px 0;
+        color: #333333;
+        font-size: 20px;
+        font-weight: normal;
+        font-weight: bold; }
+      .about-us .contain .intro-item p {
+        margin: 10px 0;
+        color: #808080;
+        font-size: 15px;
+        font-weight: normal; }
+
+/*End About us*/
+/*News*/
+.news {
+  background: url("../img/img_background_static.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 50; }
+  .news .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #263342;
+    background-blend-mode: overlay;
+    opacity: 0.9;
+    height: 100%;
+    width: 100%;
+    z-index: -5; }
+  .news .contain {
+    background-color: transparent;
+    width: 1200px;
+    margin: auto;
+    padding: 30px 0; }
+    @media screen and (max-width: 1200px) {
+      .news .contain {
+        width: 90%;
+        margin: auto; } }
+    .news .contain .vertical-item {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .news .contain .news-item h1 {
+      color: #008fe1;
+      font-size: 30px;
+      font-weight: normal;
+      margin: 20px 0; }
+    .news .contain .news-item h2 {
+      margin: 20px 0;
+      color: #fff;
+      font-size: 20px;
+      font-weight: normal;
+      font-weight: bold; }
+    .news .contain .news-item p {
+      color: #dddddd;
+      font-size: 15px;
+      font-weight: normal;
+      margin: 20px 0; }
+
+/*End News*/
+/*REf*/
+.ref {
+  background-color: #f96d00; }
+  .ref .contain {
+    background-color: transparent;
+    width: 1200px;
+    margin: auto; }
+    @media screen and (max-width: 1200px) {
+      .ref .contain {
+        width: 90%;
+        margin: auto; } }
+    .ref .contain .vertical-item {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    @media screen and (max-width: 992px) {
+      .ref .contain .d-n {
+        display: none; } }
+    @media screen and (max-width: 425px) {
+      .ref .contain .d-n {
+        display: block;
+        text-align: center; } }
+    .ref .contain .ref-item {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: normal; }
+      .ref .contain .ref-item img {
+        align-content: center;
+        width: 100px;
+        position: relative;
+        bottom: 0;
+        margin: 20px 0; }
+      .ref .contain .ref-item .detail h2 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: normal;
+        margin: 10px 0;
+        font-weight: bold; }
+      .ref .contain .ref-item .detail p {
+        color: #fff;
+        font-size: 16px;
+        font-weight: normal;
+        margin: 10px 0;
+        font-weight: bold; }
+      .ref .contain .ref-item button {
+        background-color: #fff;
+        color: #f96d00;
+        border: 1.5px solid #f96d00;
+        padding: 10px 20px;
+        font-size: 17px;
+        border-radius: 5px;
+        margin: 10px 0; }
+        .ref .contain .ref-item button:hover {
+          background-color: #fff;
+          color: #f96d00;
+          border: 1.5px solid #f96d00; }
+
+/*End Ref*/
+/*Footer*/
+#footer {
+  background-color: #263342; }
+  #footer .contain {
+    background-color: transparent;
+    width: 1200px;
+    margin: auto;
+    padding: 30px 0; }
+    @media screen and (max-width: 1200px) {
+      #footer .contain {
+        width: 90%;
+        margin: auto; } }
+    #footer .contain .footer-item h2 {
+      color: #fff;
+      font-size: 15px;
+      font-weight: normal;
+      font-weight: bold;
+      padding: 10px 0;
+      margin: 0; }
+    #footer .contain .footer-item p {
+      margin: 0;
+      color: #fff;
+      font-size: 15px;
+      font-weight: normal; }
+    #footer .contain .footer-item ul {
+      padding: 10px 0;
+      list-style: none;
+      list-style: none;
+      flex-wrap: wrap; }
+      #footer .contain .footer-item ul li a {
+        color: #fff;
+        font-size: 15px;
+        font-weight: normal; }
+        #footer .contain .footer-item ul li a i {
+          width: 40px;
+          height: 40px;
+          color: #fff;
+          font-size: 40px;
+          font-weight: normal;
+          padding: 10px 30px; }
+  @media screen and (max-width: 720px) {
+    #footer {
+      padding-bottom: 90px; } }
+
+/*End Footer*/
+
+/*# sourceMappingURL=style.css.map */

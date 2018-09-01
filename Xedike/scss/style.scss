@@ -1,0 +1,960 @@
+$color-dark-navy:#263342;
+$color-white:#fff;
+$color-blue:#008fe1;
+$color-blue-fb:#435B9A;
+$color-light-blue:#26ABED;
+$color-orange:#f96d00;
+$color-light-orange:#FF8D29;
+$color-light-yellow:#ffdd61;
+$color-yellow: #ffbf00;
+$color-black:#333333;
+$color-grey: #808080;
+$color-light-grey:#fafafa;
+$color-gray:#dddddd;
+$color-black:#333333;
+
+$pd-0: 5px;
+$pd-1: 10px;
+$pd-2: 20px;
+$pd-3: 30px;
+$pd-4per: 4%;
+$pd-7per: 7%;
+$pd-10per: 10%;
+
+$mg-1: 10px;
+$mg-2: 20px;
+$mg-3: 30px;
+$mg-4: 40px;
+$mg-5: 50px;
+$mg-6: 200px;
+
+$fs-1:15px;
+$fs-2:20px;
+$fs-3:30px;
+$fs-4:40px;
+
+$fw-bold:bold;
+$fw-normal:normal;
+
+//Mixin
+@mixin text($color,$fs)
+{
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw-normal;
+}
+@mixin button($bg,$color,$color-border,$fs,$pd,$bg-hover,$color-hover,$color-border-hover,$bor-radius)
+{
+    background-color: $bg;
+    color: $color;
+    border:1.5px solid $color-border;
+    padding: $pd;
+    font-size: $fs;
+    border-radius: $bor-radius;
+    
+    &:hover{
+        background-color: $bg-hover;
+        color: $color-hover;
+        border:1.5px solid $color-border-hover;
+    }
+}
+
+
+#header{
+    background-color: $color-dark-navy;
+    nav{
+        width: 1200px;
+        margin: auto;
+        padding: 0;
+        .navbar-brand{
+            margin-right: $mg-3;
+            padding: $pd-1 0;
+            img{
+                height: 50px;
+            }
+            @media screen and (max-width:425px){
+                margin: 0 $mg-1;
+                img{
+                    height: 30px;
+                }
+            }
+        }
+        .ul-left{
+            li{
+                a{
+                    @include text($color-white,$fs-1);
+                    font-weight: $fw-bold;
+                    padding: $pd-2 0;
+                }
+                border-bottom: 4px solid transparent;
+                border-top: 4px solid transparent;
+                padding: 0 $pd-2;
+                &:hover{
+                    border-bottom-color: $color-blue;
+                    animation: change_color 1s;
+                }
+
+                @keyframes change_color{
+                    0%{
+                        border-bottom-color: $color-white;
+                    }
+                    50%{
+                        border-bottom-color: $color-blue;
+                    }
+                }
+            }
+        }
+        .right-menu{
+            @include text($color-white,$fs-1+2);
+
+            .right-menu-login,.right-menu-signup,.right-menu-dropdown{
+
+                margin: 0 $pd-1;
+            }
+            .right-menu-login{
+                button{
+                    @include  button(transparent,$color-white,transparent, $fs-1+2, $pd-1 $pd-2 ,transparent,$color-white,transparent,$pd-0);
+               }
+            }
+            .right-menu-signup{
+                button{
+                     @include  button($color-blue,$color-white,$color-blue, $fs-1+2, $pd-1 $pd-2 ,$color-white,$color-blue,$color-white,$pd-0);
+                }
+               
+            }
+            .right-menu-dropdown{
+                font-size: $fs-3;
+                a{
+                    padding: $pd-1;
+                }
+            }
+            @media screen and (max-width:720px){
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background-color: rgba($color: $color-dark-navy, $alpha: 0.9);
+                z-index: 10000;
+                justify-content: center;
+                padding: $pd-2 0;
+                .right-menu-login{
+                    button{
+                        border-color: $color-white;
+                    }
+                }
+                .right-menu-dropdown{
+                    display: none;
+                }
+            }
+        }
+
+        @media screen and (max-width:1200px){
+            width: auto;
+            margin: 0;
+        }
+    }
+}
+
+/*Modal Form*/
+#dangnhapmodal{
+
+    .modal-dialog{
+        z-index: 20000;
+        top: 100px;
+        .modal-content{
+            
+            padding: $pd-2+5;
+            @media screen and (max-width:425px){
+                padding: 0;
+            }
+            position: relative;
+            .button-close{
+                position: absolute;
+                top: $pd-1+5;
+                right: $pd-1+5;
+                z-index: 1002;
+            }
+            .contain-modal{
+                padding:  $pd-2+5;
+
+                .form-group{
+                    margin-top: $pd-2;
+                }
+                h2{
+                    @include text($color-black, $fs-2+5 );
+                    font-weight: bold;
+                }
+                p{
+                    @include text( $color-grey,$fs-1*0.8 );
+                    margin-bottom: $mg-5;
+                }
+                form{
+                    .input-f{
+                        input{
+                            height: $pd-3+16;
+                            &::placeholder{
+                                color: $color-grey;
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                    .checkbox-login{
+                        @include text( $color-black,$fs-1*0.9);
+                    }
+                    .btn-login{
+                        @include  button($color-blue,$color-white,$color-blue, $fs-1+2, $pd-1 $pd-2 ,$color-white,$color-blue,$color-white,$pd-0);
+                
+                    }
+                    .title-with-line{
+                        border-bottom: 1px solid $color-grey;
+                        opacity: 0.8;
+                        height: 14px;
+                        position: relative;
+                        span{
+                            padding: 0 $pd-1;
+                            background-color: $color-white;
+                            @include text($color-black, $fs-1*0.9);
+                        }
+                    }
+                    .btn-login-fb{
+                        @include  button($color-blue-fb,$color-white,$color-blue-fb, $fs-1+2, $pd-1 $pd-2 ,$color-blue-fb,$color-white,$color-blue-fb,$pd-0);
+                        i{
+                            margin-right: $pd-0;
+                        }
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#dangkymodal{
+
+    .modal-dialog{
+        z-index: 20000;
+        top: 100px;
+        .modal-content{
+            h2{
+                @include text($color-black, $fs-2+5 );
+                font-weight: bold;
+            }
+            padding: $pd-2+5;
+            position: relative;
+
+            .button-close{
+                position: absolute;
+                top: $pd-1+5;
+                right: $pd-1+5;
+                z-index: 1002;
+            }
+            .contain-modal{
+                padding:  $pd-2+5;
+
+                @media screen and (max-width:425px){
+                    
+                        padding: 0;
+
+                }
+            }
+            .btn-signup{
+                @include  button(transparent,$color-black,$color-gray, $fs-1+2,0 ,$color-gray,$color-black,$color-blue,$pd-0);
+                
+                .signup-padding{
+                    padding: $pd-2;
+                    p{
+                        margin-top: $pd-3;
+                        margin-bottom: $pd-2;
+                        font-weight: bold;
+                        @media screen and (max-width:400px){
+                            font-size: $fs-1*0.9;
+                            margin-top: $pd-1;
+                            margin-bottom: 0;
+                        }
+                    }
+                    @media screen and (max-width:400px){
+                        padding: $pd-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#dangky-khachmodal{
+
+    .modal-dialog{
+        top:25px;
+        z-index: 20000;
+        .modal-content{
+            
+            padding: $pd-2+5;
+            @media screen and (max-width:425px){
+                padding: 0;
+            }
+            position: relative;
+            .button-close{
+                position: absolute;
+                top: $pd-1;
+                right: $pd-1;
+                z-index: 1002;
+            }
+            .contain-modal{
+                padding:  $pd-2+5;
+
+                .form-group{
+                    margin-bottom: $pd-2;
+                }
+                h2{
+                    @include text($color-black, $fs-2+5 );
+                    font-weight: bold;
+                }
+                p{
+                    @include text( $color-grey,$fs-1*0.9 );
+                    margin-bottom: $mg-4;
+                }
+                form{
+                    .input-f{
+                        input{
+                            height: $pd-3+16;
+                            &::placeholder{
+                                color: $color-grey;
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                    .btn-login{
+                        @include  button($color-blue,$color-white,$color-blue, $fs-1+2, $pd-1 $pd-2 ,$color-white,$color-blue,$color-white,$pd-0);
+                    }
+                    .title-with-line{
+                        border-bottom: 1px solid $color-grey;
+                        opacity: 0.8;
+                        height: 14px;
+                        position: relative;
+                        span{
+                            padding: 0 $pd-1;
+                            background-color: $color-white;
+                            @include text($color-black, $fs-1*0.9);
+                        }
+                    }
+                    .btn-login-fb{
+                        @include  button($color-blue-fb,$color-white,$color-blue-fb, $fs-1+2, $pd-1 $pd-2 ,$color-blue-fb,$color-white,$color-blue-fb,$pd-0);
+                        i{
+                            margin-right: $pd-0;
+                        }
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#dangky-taixemodal{
+    @extend #dangky-khachmodal;
+}
+
+#quen-matkhaumodal{
+    @extend #dangky-taixemodal;
+    .contain-modal{
+        p{
+            margin: $pd-2;
+        }
+    }
+    
+    .btn-login{
+        margin-top: $pd-2;
+        @include  button($color-blue,$color-white,$color-blue, $fs-1+2, $pd-1 $pd-2 ,$color-white,$color-blue,$color-white,$pd-0);
+    }
+}
+/*End Modal Form*/
+
+
+/*Contain*/
+.contain-top{
+    
+    background:
+    url('../img/img_topbg_home.png'),
+    url('../img/img_background_5trip.6ad1787f.png');
+    background-position: center top, center bottom;
+    background-repeat: no-repeat;
+    z-index: 50;
+    position: relative;
+    
+    .overplay{
+        position: absolute;
+        top: 0;
+        background-color: $color-dark-navy;
+        background-blend-mode: overlay;
+        opacity: 0.3;
+        height: 630px;
+        width: 100%;
+        z-index: -5;
+    }
+
+    .main-title{
+        z-index: 5000;
+        h1{
+            @include text($color-white,$fs-4);
+            font-weight: 500;
+            padding-top: $pd-3*4;
+
+            @media screen and (max-width:1200px){
+                padding-top:$pd-3*2;
+            }
+        }
+        p{
+            @include text($color-white,$fs-2*1.2);
+            padding:$pd-3 0;
+            @media screen and (max-width:1200px){
+                padding:$pd-3 0;
+            }
+        }
+    }
+
+    .main-input-group{
+        width: 80%;
+        margin: auto;
+            
+        
+        .group-content{
+            
+            
+            
+            .group-item{
+                
+
+                
+                .input-group{
+
+                    @include  button($color-white,$color-black,$color-white, $fs-1+2, $pd-1  $pd-1,$color-white,$color-black,$color-white,0);
+
+                    
+
+                    .input-group-text,.input-group-prepend{
+                        border-radius: 0;
+                        background-color: $color-white;
+                        width: 50px;
+                        border: 0;
+                    }
+                    .form-control{
+                        border-radius: 0;
+                        border: 0;
+                    }
+                    .input-date,.input-number
+                    {
+                        height: 38px;
+                        
+                    }
+                    .number-title{
+                            line-height: 38px;
+                    }
+                
+                }
+                .border-left-main{
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        
+                }
+            }
+            
+            
+        }
+        button{
+            
+            @include  button($color-blue,$color-black,$color-blue, $fs-1+2, $pd-1  $pd-1,$color-blue,$color-black,$color-blue,0);
+            
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            
+        }
+        @media screen and (max-width:1200px){
+            width: 90%;
+            .group-content{
+                background-color: transparent;
+                border-color: transparent;
+                
+
+                .group-item{
+
+                
+                .input-group{
+                    
+                        margin: $pd-1 0;   
+
+                        @include  button($color-white,$color-black,$color-white, $fs-1+2, $pd-1  $pd-1,$color-white,$color-black,$color-white,$pd-0);
+
+                        .input-group-text,.input-group-prepend{
+                            border-radius: 0;
+                            background-color: $color-white;
+                            width: 50px;
+                            
+                        }
+                        .form-control{
+                            border-radius: 0;
+                            
+                        }
+                    }
+                }
+                
+            }
+            button{
+                margin: $pd-1 0;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .container-content{
+        
+        width: 75%;
+        margin: auto;
+        
+        @include  button($color-white,$color-black,$color-gray, $fs-1+2, 0 ,$color-white,$color-black,$color-gray,$pd-1);
+        
+        margin-top: $pd-3*4;
+        .bg-grey{
+            background-color: $color-light-grey;
+            border-top: 1px solid $color-gray;
+            border-bottom: 1px solid $color-gray;
+        }
+        .container-item{
+
+            padding: $pd-2;
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-auto-flow: column;
+            grid-auto-rows: minmax(30px,auto);
+                    
+            grid-gap: 15px;/*grid-columns-gap | grid-rows-gap*/
+                
+            .item{
+
+                p{
+                    margin: 0;
+                    line-height: 40px;
+                }
+                .title{
+                    @include text($color-black, $fs-2*0.9);
+                    font-weight: bold;
+
+                    @media screen and (max-width:510px) {
+                        @include text($color-black, $fs-2*0.9);
+                        font-weight: bold;
+                    }
+                }   
+                .date{
+                    i{
+                        padding-right: $pd-1;
+                        @include text($color-grey, $fs-2*0.9);
+                    }
+                    span{
+                        @include text($color-black, $fs-2*0.9);
+                    }
+                    @media screen and (max-width:510px) {
+                        i,span{
+                            @include text($color-black, $fs-2*0.8);
+                        }
+                        
+                    }
+                }
+                .vehicle{
+                    i{
+                        padding-right: $pd-1;
+                        @include text($color-grey, $fs-2*0.9);
+                    }
+                    span{
+                        @include text($color-grey, $fs-2*0.9);
+                    }
+                    @media screen and (max-width:510px) {
+                        i,span{
+                            @include text($color-black, $fs-2*0.8);
+                        }
+                        
+                    }
+                }
+                .info{
+                    p{
+                        i{
+                        padding-right: $pd-1;
+                        @include text($color-grey, $fs-2*0.9);
+                        }
+                    }
+                }
+                .name{
+                    display: flex;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        
+                    }
+                    p{
+                        padding-left: $pd-1;
+                        @include text($color-black, $fs-2*0.9);
+                        font-weight: bold;
+                    }
+                    @media screen and (max-width:510px) {
+                        display: inline-block;
+                        text-align: center;
+                        img{
+                            
+                        }
+                        p{
+                            word-wrap: break-word;
+                            padding: 0;
+                        }
+                        
+                    }
+                }
+                .rating{
+                    display: flex;
+                    .rating-point{
+                        @include  button($color-yellow,$color-black,$color-yellow, $fs-1+2, $pd-1 $pd-1+2 ,$color-yellow,$color-black,$color-yellow,50%);
+                    }
+                    .rating-comment{
+                        padding-left: $pd-1;
+                        .rating-star{
+                            color: $color-yellow;
+                        }
+                    }
+                    @media screen and (max-width:510px) {
+
+                        width: 100%;
+                        display: inline-block;
+                        text-align: center;
+                        
+                        .rating-point{
+                            margin: auto;
+                            text-align: center;
+                            width: 50px;
+                            height: 50px;
+                            line-height: 50px;
+                            @include  button($color-yellow,$color-black,$color-yellow, $fs-1+2, 0,$color-yellow,$color-black,$color-yellow,50%);
+                        }
+                        
+                    }
+                }
+                .price{
+                    @include text($color-black, $fs-2*1.1);
+                    font-weight: bold;
+                    text-align: center;
+                    
+                    p{
+                        line-height: 40px;
+                    }
+                    @media screen and (max-width:857px) {
+                        text-align: left;
+                    }
+                }
+                .detail-trip{
+                    text-align: center;
+                    button{
+                        @include  button($color-orange,$color-white,$color-orange, $fs-1+2, $pd-1 $pd-1+2 ,$color-white,$color-orange,$color-orange,$pd-0);
+                        
+                    }
+                    @media screen and (max-width:857px) {
+                        text-align: left;
+                    }
+                }
+            }
+                
+
+            @media screen and (max-width:857px) {
+                
+                grid-template-columns: repeat(2,1fr);
+                grid-auto-flow: row;
+
+                .merge-col1-2{
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                }
+                .merge-col4-5{
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                }
+
+                .item{
+                    width: 100%;
+                }
+            }
+        }
+        @media screen and (max-width:1200px){
+            width: 90%;
+            border-radius: 0;
+            background-color: transparent;
+            border-color: transparent;
+            .container-item{
+                margin: $pd-2 0;
+                @include  button($color-white,$color-black,$color-gray, $fs-1+2, $pd-2 $pd-2 ,$color-white,$color-black,$color-gray,$pd-0);
+                .title{
+                    border-bottom: 1px solid $color-gray;
+                }
+            }
+        }
+    } 
+    padding-bottom: $pd-3*2;
+}
+//*End */*/
+
+/*Intro*/
+.intro{
+    width: 1200px;
+    margin: auto;
+
+    padding: $pd-3*2 0;
+
+    @media screen  and (max-width:1200px){
+        width: 90%;
+        margin: auto;
+    }
+    .content{
+        .intro-detail{
+            h1{
+                @include text($color-black,$fs-3);
+                font-weight: 500;
+                margin: 0;
+            }
+            p{
+                padding: $pd-2 0;
+                @include text($color-black,$fs-1*1.2);
+            }
+            button{
+                @include  button($color-blue,$color-white,$color-blue, $fs-1+2, $pd-1 $pd-2 ,$color-white,$color-blue,$color-blue,$pd-0);
+            }
+        }
+    }
+}
+/*End Intro*/
+
+/*About us*/
+.about-us{
+
+    
+    background-color: #F3FCFF;
+    .contain{
+        width: 1200px;
+            margin: auto;
+
+            padding: $pd-3*2 0;
+
+            @media screen  and (max-width:1200px){
+                width: 90%;
+                margin: auto;
+            }
+    
+
+            
+            .about-title{
+                h1{
+                    @include text($color-black,$fs-3);
+                    font-weight: bold;
+                }
+                p{
+                    @include text($color-grey,$fs-1);
+                    margin: 0;
+                }
+                margin-bottom: $pd-2*3;
+            }
+            .intro-item{
+                text-align: center;
+                img{
+                    margin: $pd-1 0;
+                    height: 65px;
+                }
+                h2{
+                    margin: $pd-1 0;
+                    @include text($color-black,$fs-2);
+                    font-weight: bold;
+                }
+                p{
+                    margin: $pd-1 0;
+                    @include text($color-grey,$fs-1);
+                }
+            }
+    }
+}
+/*End About us*/
+
+/*News*/
+.news{
+
+    background:
+    url('../img/img_background_static.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 50;
+
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-dark-navy;
+        background-blend-mode: overlay;
+        opacity: 0.9;
+        height: 100%;
+        width: 100%;
+        z-index: -5;
+    }
+
+    .contain{
+        background-color: transparent;
+            width: 1200px;
+            margin: auto;
+
+            padding: $pd-3 0;
+
+            @media screen  and (max-width:1200px){
+                width: 90%;
+                margin: auto;
+            }
+        .vertical-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } 
+        .news-item{
+
+            
+            h1{
+                @include text($color-blue,$fs-3);
+                margin: $pd-2 0;
+            }
+            h2{
+                margin: $pd-2 0;
+                @include text($color-white,$fs-2);
+                font-weight: bold;
+            }
+            p{
+                @include text($color-gray,$fs-1);
+                margin: $pd-2 0;
+            }
+        }
+    }
+}
+/*End News*/
+
+/*REf*/
+.ref{
+    background-color: $color-orange;
+
+    .contain{
+        background-color: transparent;
+            width: 1200px;
+            margin: auto;
+
+
+            @media screen  and (max-width:1200px){
+                width: 90%;
+                margin: auto;
+            }
+        .vertical-item{
+             
+            
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        }
+        .d-n{
+            @media screen and (max-width:992px){
+                 display: none;
+            }
+            @media screen and (max-width:425px){
+                display: block;
+                text-align: center;
+            }
+        } 
+         
+        .ref-item{
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+
+            img{
+                align-content: center;
+                width: 100px;
+                position: relative;
+                bottom: 0;
+                margin: $pd-2 0;
+            }
+            .detail{
+                h2{
+                    @include text($color-white,$fs-2);
+                    margin: $pd-1 0;
+                    font-weight: bold;
+                }
+                p{
+                    @include text($color-white,$fs-1+1);
+                    margin: $pd-1 0;
+                    font-weight: bold;
+                }
+            }
+            
+            button{
+                @include  button($color-white,$color-orange,$color-orange, $fs-1+2, $pd-1 $pd-2 ,$color-white,$color-orange,$color-orange,$pd-0);
+                margin: $pd-1 0;
+                
+            }
+        }
+    }
+}
+/*End Ref*/
+
+/*Footer*/
+#footer{
+    background-color: $color-dark-navy;
+    .contain{
+        background-color: transparent;
+            width: 1200px;
+            margin: auto;
+
+            padding: $pd-3 0;
+
+            @media screen  and (max-width:1200px){
+                width: 90%;
+                margin: auto;
+            }
+        .footer-item{
+            img{
+
+            }
+            h2{
+                @include text($color-white,$fs-1);
+                font-weight: bold;
+                padding: $pd-1 0;
+                margin: 0;
+            }
+            p{
+                margin:0;
+                @include text($color-white,$fs-1);
+            }
+            ul{
+                padding: $pd-1 0;
+                list-style: none;
+                list-style: none;
+                flex-wrap: wrap;
+                li{
+                    a{
+                        
+                        @include text($color-white,$fs-1);
+                        i{
+                            width: 40px;
+                            height: 40px;
+                            @include text($color-white,$fs-4);
+                            padding: $pd-1 $pd-3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:720px) {
+        padding-bottom: $pd-3*3;
+    }
+}
+/*End Footer*/
