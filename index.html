@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Xe đi ké</title>
+    <title>Document</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -33,10 +33,10 @@
 
             <div class="d-flex right-menu ml-auto align-items-center ">
                 <div class="right-menu-login">
-                    <button class="" data-toggle="modal" data-target="#dangnhapmodal">Đăng nhập</button>
+                    <button class="op-modal" data-toggle="modal" data-target="#dangnhapmodal">Đăng nhập</button>
                 </div>
                 <div class="right-menu-signup">
-                    <button class="" data-toggle="modal" data-target="#dangkymodal">Đăng ký</button>
+                    <button class="op-modal" data-toggle="modal" data-target="#dangkymodal">Đăng ký</button>
                 </div>
                 <div class="right-menu-dropdown dropdown">
                     <a class="text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="false">
@@ -61,7 +61,7 @@
 
                         <h2 class="text-center">Đăng nhập</h2>
                         <p class="text-center">Bạn chưa có tài khoản?
-                            <a href="" data-toggle="modal" data-target="#dangkymodal" data-dismiss="modal">Đăng ký</a>
+                            <a href="" class="op-modal" data-toggle="modal" data-target="#dangkymodal" data-dismiss="modal">Đăng ký</a>
                         </p>
                         <form action="">
                             <div class="form-group input-f">
@@ -78,7 +78,7 @@
                                     <span class="pl-2">Ghi nhớ tài khoản</span>
                                 </div>
                                 <div class="text-right w-50">
-                                    <a href="" data-toggle="modal" data-target="#quen-matkhaumodal" data-dismiss="modal">Quên mật khẩu?</a>
+                                    <a href="" class="op-modal" data-toggle="modal" data-target="#quen-matkhaumodal" data-dismiss="modal">Quên mật khẩu?</a>
                                 </div>
                             </div>
                             <div class="form-group ">
@@ -113,13 +113,13 @@
                     <div class="contain-modal">
                         <h2 class="text-center">Bạn muốn đăng ký với tài khoản</h2>
                         <p class="text-center">Bạn đã có tài khoản?
-                            <a href="#" class="" data-dismiss="modal" data-toggle="modal" data-target="#dangnhapmodal">Đăng nhập</a>
+                            <a href="#" class="op-modal" data-dismiss="modal" data-toggle="modal" data-target="#dangnhapmodal">Đăng nhập</a>
                         </p>
                     </div>
                     <div class="row m-0">
                         <div class="col-6 p-2">
                             <div class="text-center">
-                                <button class="btn-signup" data-dismiss="modal" data-toggle="modal" data-target="#dangky-khachmodal">
+                                <button class="btn-signup op-modal" data-dismiss="modal" data-toggle="modal" data-target="#dangky-khachmodal">
                                     <div class="signup-padding">
                                         <img src="img/img_signup_passenger.png" alt="" class="img-fluid">
                                         <p>Hành Khách</p>
@@ -131,7 +131,7 @@
                         </div>
                         <div class="col-6 p-2">
                             <div class="text-center">
-                                <button class="btn-signup" data-dismiss="modal" data-toggle="modal" data-target="#dangky-taixemodal">
+                                <button class="btn-signup op-modal" data-dismiss="modal" data-toggle="modal" data-target="#dangky-taixemodal">
                                     <div class="signup-padding">
                                         <img src="img/img_signup_driver.png" alt="" class="img-fluid">
                                         <p>Tài xế</p>
@@ -157,7 +157,7 @@
 
                         <h2 class="text-center">Đăng ký tài khoản hành khách</h2>
                         <p class="text-center">Bạn đã có tài khoản?
-                            <a href="" data-toggle="modal" data-target="#dangnhapmodal" data-dismiss="modal">Đăng nhập</a>
+                            <a href="#" class="op-modal" data-dismiss="modal" data-toggle="modal" data-target="#dangnhapmodal" >Đăng nhập</a>
                         </p>
 
                         <form action="">
@@ -244,7 +244,7 @@
 
                         <h2 class="text-center">Đăng ký tài khoản tài xế</h2>
                         <p class="text-center">Bạn đã có tài khoản?
-                            <a href="" data-toggle="modal" data-target="#dangnhapmodal" data-dismiss="modal">Đăng nhập</a>
+                            <a href="" class="op-modal" data-toggle="modal" data-target="#dangnhapmodal" data-dismiss="modal">Đăng nhập</a>
                         </p>
 
                         <form action="">
@@ -325,7 +325,7 @@
                                 <input type="number" class="form-control" placeholder="Số điện thoại">
                             </div>
                             <div class="form-group">
-                                <button class="btn form-control btn-login">Đăng ký</button>
+                                <button class="btn form-control btn-login">Xác nhận</button>
                             </div>
                         </form>
                     </div>

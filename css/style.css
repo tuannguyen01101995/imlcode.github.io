@@ -70,7 +70,7 @@
           bottom: 0;
           width: 100%;
           background-color: rgba(38, 51, 66, 0.9);
-          z-index: 10000;
+          z-index: 100;
           justify-content: center;
           padding: 20px 0; }
           #header nav .right-menu .right-menu-login button {
@@ -83,83 +83,79 @@
         margin: 0; } }
 
 /*Modal Form*/
-#dangnhapmodal .modal-dialog {
-  z-index: 20000;
-  top: 100px; }
-  #dangnhapmodal .modal-dialog .modal-content {
-    padding: 25px;
-    position: relative; }
-    @media screen and (max-width: 425px) {
-      #dangnhapmodal .modal-dialog .modal-content {
-        padding: 0; } }
-    #dangnhapmodal .modal-dialog .modal-content .button-close {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      z-index: 1002; }
-    #dangnhapmodal .modal-dialog .modal-content .contain-modal {
-      padding: 25px; }
-      #dangnhapmodal .modal-dialog .modal-content .contain-modal .form-group {
-        margin-top: 20px; }
-      #dangnhapmodal .modal-dialog .modal-content .contain-modal h2 {
-        color: #333333;
-        font-size: 25px;
-        font-weight: normal;
-        font-weight: bold; }
-      #dangnhapmodal .modal-dialog .modal-content .contain-modal p {
+#dangnhapmodal .modal-dialog .modal-content {
+  padding: 25px;
+  position: relative; }
+  @media screen and (max-width: 425px) {
+    #dangnhapmodal .modal-dialog .modal-content {
+      padding: 0; } }
+  #dangnhapmodal .modal-dialog .modal-content .button-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2; }
+  #dangnhapmodal .modal-dialog .modal-content .contain-modal {
+    padding: 25px; }
+    #dangnhapmodal .modal-dialog .modal-content .contain-modal .form-group {
+      margin-top: 20px; }
+    #dangnhapmodal .modal-dialog .modal-content .contain-modal h2 {
+      color: #333333;
+      font-size: 25px;
+      font-weight: normal;
+      font-weight: bold; }
+    #dangnhapmodal .modal-dialog .modal-content .contain-modal p {
+      color: #808080;
+      font-size: 12px;
+      font-weight: normal;
+      margin-bottom: 50px; }
+    #dangnhapmodal .modal-dialog .modal-content .contain-modal form .input-f input {
+      height: 46px; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .input-f input::placeholder {
         color: #808080;
-        font-size: 12px;
-        font-weight: normal;
-        margin-bottom: 50px; }
-      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .input-f input {
-        height: 46px; }
-        #dangnhapmodal .modal-dialog .modal-content .contain-modal form .input-f input::placeholder {
-          color: #808080;
-          opacity: 0.7; }
-      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .checkbox-login {
+        opacity: 0.7; }
+    #dangnhapmodal .modal-dialog .modal-content .contain-modal form .checkbox-login {
+      color: #333333;
+      font-size: 13.5px;
+      font-weight: normal; }
+    #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login {
+      background-color: #008fe1;
+      color: #fff;
+      border: 1.5px solid #008fe1;
+      padding: 10px 20px;
+      font-size: 17px;
+      border-radius: 5px; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login:hover {
+        background-color: #fff;
+        color: #008fe1;
+        border: 1.5px solid #fff; }
+    #dangnhapmodal .modal-dialog .modal-content .contain-modal form .title-with-line {
+      border-bottom: 1px solid #808080;
+      opacity: 0.8;
+      height: 14px;
+      position: relative; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .title-with-line span {
+        padding: 0 10px;
+        background-color: #fff;
         color: #333333;
         font-size: 13.5px;
         font-weight: normal; }
-      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login {
-        background-color: #008fe1;
-        color: #fff;
-        border: 1.5px solid #008fe1;
-        padding: 10px 20px;
-        font-size: 17px;
-        border-radius: 5px; }
-        #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login:hover {
-          background-color: #fff;
-          color: #008fe1;
-          border: 1.5px solid #fff; }
-      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .title-with-line {
-        border-bottom: 1px solid #808080;
-        opacity: 0.8;
-        height: 14px;
-        position: relative; }
-        #dangnhapmodal .modal-dialog .modal-content .contain-modal form .title-with-line span {
-          padding: 0 10px;
-          background-color: #fff;
-          color: #333333;
-          font-size: 13.5px;
-          font-weight: normal; }
-      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb {
+    #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb {
+      background-color: #435B9A;
+      color: #fff;
+      border: 1.5px solid #435B9A;
+      padding: 10px 20px;
+      font-size: 17px;
+      border-radius: 5px; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb:hover {
         background-color: #435B9A;
         color: #fff;
-        border: 1.5px solid #435B9A;
-        padding: 10px 20px;
-        font-size: 17px;
-        border-radius: 5px; }
-        #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb:hover {
-          background-color: #435B9A;
-          color: #fff;
-          border: 1.5px solid #435B9A; }
-        #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb i {
-          margin-right: 5px; }
-        #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb span {
-          font-weight: bold; }
+        border: 1.5px solid #435B9A; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb i {
+        margin-right: 5px; }
+      #dangnhapmodal .modal-dialog .modal-content .contain-modal form .btn-login-fb span {
+        font-weight: bold; }
 
 #dangkymodal .modal-dialog {
-  z-index: 20000;
   top: 100px; }
   #dangkymodal .modal-dialog .modal-content {
     padding: 25px;
@@ -172,8 +168,7 @@
     #dangkymodal .modal-dialog .modal-content .button-close {
       position: absolute;
       top: 15px;
-      right: 15px;
-      z-index: 1002; }
+      right: 15px; }
     #dangkymodal .modal-dialog .modal-content .contain-modal {
       padding: 25px; }
       @media screen and (max-width: 425px) {
@@ -206,8 +201,7 @@
             padding: 10px; } }
 
 #dangky-khachmodal .modal-dialog, #dangky-taixemodal .modal-dialog, #quen-matkhaumodal .modal-dialog {
-  top: 25px;
-  z-index: 20000; }
+  top: 25px; }
   #dangky-khachmodal .modal-dialog .modal-content, #dangky-taixemodal .modal-dialog .modal-content, #quen-matkhaumodal .modal-dialog .modal-content {
     padding: 25px;
     position: relative; }
@@ -218,7 +212,7 @@
       position: absolute;
       top: 10px;
       right: 10px;
-      z-index: 1002; }
+      z-index: 2; }
     #dangky-khachmodal .modal-dialog .modal-content .contain-modal, #dangky-taixemodal .modal-dialog .modal-content .contain-modal, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal {
       padding: 25px; }
       #dangky-khachmodal .modal-dialog .modal-content .contain-modal .form-group, #dangky-taixemodal .modal-dialog .modal-content .contain-modal .form-group, #quen-matkhaumodal .modal-dialog .modal-content .contain-modal .form-group {
@@ -410,7 +404,7 @@
     .contain-top .container-content:hover {
       background-color: #fff;
       color: #333333;
-      border: 1.5px solid #dddddd; }
+      border: 1.5px solid transparent; }
     .contain-top .container-content .bg-grey {
       background-color: #fafafa;
       border-top: 1px solid #dddddd;
@@ -583,7 +577,7 @@
           .contain-top .container-content .container-item:hover {
             background-color: #fff;
             color: #333333;
-            border: 1.5px solid #dddddd; }
+            border: 1.5px solid transparent; }
           .contain-top .container-content .container-item .title {
             border-bottom: 1px solid #dddddd; } }
 
